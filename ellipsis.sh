@@ -1,24 +1,24 @@
 #!/usr/bin/env bash
-#
-# katharinegillis/vim ellipsis package
 
-# The following hooks can be defined to customize behavior of your package:
-# pkg.install() {
-#     fs.link_files $PKG_PATH
-# }
+if [ ! -d "$PKG_PATH/../common" ]; then
+    echo "Dependency on katharinegillis/common, package is missing."
+    exit 1
+fi
 
-# pkg.push() {
-#     git.push
-# }
+source "$PKG_PATH/../common/common.sh"
 
-# pkg.pull() {
-#     git.pull
-# }
+pkg.link() {
+    common_link
+}
 
-# pkg.installed() {
-#     git.status
-# }
-#
-# pkg.status() {
-#     git.diffstat
-# }
+pkg.install() {
+    common_install
+}
+
+pkg.pull() {
+    common_pull
+}
+
+pkg.uninstall() {
+    common_uninstall
+}
