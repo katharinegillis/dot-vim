@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-sudo apt-get remove vim -y
+SYSTEM=$3
+
+if [ "$SYSTEM" == "mac" ]; then
+    brew uninstall vim
+else
+    sudo apt-get remove vim -y
+fi

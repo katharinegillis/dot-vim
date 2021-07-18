@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-sudo apt-get install vim
+SYSTEM=$3
+
+if [ "$SYSTEM" == "mac" ]; then
+    brew install vim
+else
+    sudo apt-get install vim -y
+fi
