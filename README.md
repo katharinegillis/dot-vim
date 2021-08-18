@@ -2,10 +2,4 @@
 Installs vim.
 
 ## Install
-Clone and symlink or install with [ellipsis][ellipsis]:
-
-```
-$ ellipsis install katharinegillis/vim
-```
-
-[ellipsis]: http://ellipsis.sh
+Installs via the [katharinegillis/dot-desktop](https://github.com/katharinegillis/dot-desktop).
